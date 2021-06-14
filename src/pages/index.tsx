@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { loremIpsum } from "lorem-ipsum";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 
 export default function Home() {
   const [valueLorem, setValueLorem] = useState(0);
@@ -126,19 +126,59 @@ export default function Home() {
               <div className="copy">
                 <div
                   ref={copyDiv}
-                  dangerouslySetInnerHTML={{
-                    __html: loremIpsum({
-                      count: valueLorem,
-                      format: "html",
-                      paragraphLowerBound: 6, // Min. number of sentences per paragraph.
-                      paragraphUpperBound: 10, // Max. number of sentences per paragarph.
-                      sentenceLowerBound: 8, // Min. number of words per sentence.
-                      sentenceUpperBound: 20, // Max. number of words per sentence.
-                      suffix: "\r\n", // Line ending, defaults to "\n" or "\r\n" (win32)
-                      units: `${typeOfText}`, // paragraph(s), "sentence(s)", or "word(s)"
-                    }),
-                  }}
-                  // ref={text}
+                  dangerouslySetInnerHTML={
+                    typeOfText == "paragraphs"
+                      ? {
+                          __html: loremIpsum({
+                            count: valueLorem,
+                            format: "html",
+                            paragraphLowerBound: 6, // Min. number of sentences per paragraph.
+                            paragraphUpperBound: 10, // Max. number of sentences per paragarph.
+                            sentenceLowerBound: 8, // Min. number of words per sentence.
+                            sentenceUpperBound: 20, // Max. number of words per sentence.
+                            suffix: "\r\n", // Line ending, defaults to "\n" or "\r\n" (win32)
+                            units: `paragraphs`,
+                          }),
+                        }
+                      : typeOfText == "words"
+                      ? {
+                          __html: loremIpsum({
+                            count: valueLorem,
+                            format: "html",
+                            paragraphLowerBound: 6, // Min. number of sentences per paragraph.
+                            paragraphUpperBound: 10, // Max. number of sentences per paragarph.
+                            sentenceLowerBound: 8, // Min. number of words per sentence.
+                            sentenceUpperBound: 20, // Max. number of words per sentence.
+                            suffix: "\r\n", // Line ending, defaults to "\n" or "\r\n" (win32)
+                            units: `words`,
+                          }),
+                        }
+                      : typeOfText == "sentences"
+                      ? {
+                          __html: loremIpsum({
+                            count: valueLorem,
+                            format: "html",
+                            paragraphLowerBound: 6, // Min. number of sentences per paragraph.
+                            paragraphUpperBound: 10, // Max. number of sentences per paragarph.
+                            sentenceLowerBound: 8, // Min. number of words per sentence.
+                            sentenceUpperBound: 20, // Max. number of words per sentence.
+                            suffix: "\r\n", // Line ending, defaults to "\n" or "\r\n" (win32)
+                            units: `sentences`,
+                          }),
+                        }
+                      : {
+                          __html: loremIpsum({
+                            count: valueLorem,
+                            format: "html",
+                            paragraphLowerBound: 6, // Min. number of sentences per paragraph.
+                            paragraphUpperBound: 10, // Max. number of sentences per paragarph.
+                            sentenceLowerBound: 8, // Min. number of words per sentence.
+                            sentenceUpperBound: 20, // Max. number of words per sentence.
+                            suffix: "\r\n", // Line ending, defaults to "\n" or "\r\n" (win32)
+                            units: `paragraphs`,
+                          }),
+                        }
+                  }
                 />
               </div>
             )}
