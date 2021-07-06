@@ -16,32 +16,43 @@ export default class MyDocument extends Document {
           />
           <meta name="author" content="Hildebrando Viana Matos" />
           <meta name="creator" content="Hildebrando" />
-          <meta name="application-name" content="Convert Your Text" />
+          <meta name="application-name" content="H Lorem Ipsum" />
           <meta
             name="description"
-            content="Convert your text simply and quickly to any type of text."
+            content="Generate lorem ipsum easily and quickly"
           />
           <meta
             name="keywords"
-            content="convert your text, convert text, text convert, simple convert, fast convert"
+            content="H Lorem Ipsum, Lorem Ipsum, simple text, text, document text"
           />
           <meta name="format-detection" content="telephone=no" />
-          <meta property="og:site_name" content="Convert Your Text" />
+          <meta
+            property="og:site_name"
+            content="H Lorem Ipsum | Create Lorem Ipsum"
+          />
           <meta
             property="og:title"
-            content="Convert Your Text - Simple and Fast"
+            content="H Lorem Ipsum | Create Lorem Ipsum"
           />
-          <meta property="og:site_name" content="Convert Your Text" />
+          <meta
+            property="og:site_name"
+            content="H Lorem Ipsum | Create Lorem Ipsum"
+          />
           <meta
             property="og:description"
-            content="Convert your text simply and quickly to any type of text."
+            content="Generate lorem ipsum easily and quickly"
           />
-          <meta property="og:url" content="https://convertyourtext.com" />
+          <meta property="og:url" content="https://www.hloremipsum.com" />
           <meta
             name="twitter:title"
-            content="Convert Your Text - Simple and Fast"
+            content="H Lorem Ipsum | Create Lorem Ipsum"
           />
           <link rel="shortcut icon" href="favicon.png" type="image/x-png" />
+          <script
+            data-ad-client="ca-pub-8879792659196819"
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          ></script>
         </Head>
 
         <body>
